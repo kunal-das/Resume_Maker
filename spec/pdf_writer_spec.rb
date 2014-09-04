@@ -1,7 +1,6 @@
 require "spec_helper"
 require_relative "../lib/plugins/pdf_writer.rb"
 require_relative "../lib/user.rb"
-#require_relative "../lib/file_exporter.rb"
 
 describe "PDFWriter" do
 	let(:user) {User.new(["Kunal", "22", "9945401604"])}
