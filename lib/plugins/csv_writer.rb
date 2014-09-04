@@ -3,11 +3,6 @@ require_relative "../file_exporter.rb"
 
 class CSVWriter < FileExporter
 	
-	#def initialize(user_data)
-	#	@user_data = user_data
-		#register_plugin("csv", "CSVWriter")
-	#end
-
 	register_plugin("csv", "CSVWriter")
 
 	def formatter
