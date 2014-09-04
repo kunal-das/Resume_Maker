@@ -2,11 +2,6 @@ require_relative "../file_exporter.rb"
 
 class PDFWriter < FileExporter
 
-	#def initialize(user_data)
-	#	@user_data = user_data
-		#register_plugin("pdf", "PDFWriter")
-	#end
-
 	register_plugin("pdf", "PDFWriter")
 
 	def formatter
