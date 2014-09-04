@@ -16,34 +16,23 @@ describe "ResumeBuilder" do
 
 	it "identifies the csv format" do
 		ResumeBuilder.any_instance.stub(:prompt).and_return(["csv", "name", 23, 2315496825])
-		#resume.user = User.new(["something", 23, 123456796])
 		resume.create_user
 		expect(resume.format).to eql("csv")
-		#CSVWriter.any_instance.should_receive(:write_to_file)
-		#resume.write_file
-
-		#expect(resume.format.include?("csv")).to eql(true)
-		#expect()
 	end
 
 	it "identifies the txt format" do
 		ResumeBuilder.any_instance.stub(:prompt).and_return(["txt", "name", 23, 2315496825])
-		#TXTWriter.any_instance.should_receive(:write_to_file)
 		resume.create_user
 		expect(resume.format).to eql("txt")
-		#resume.write_file
 	end
 
 	it "identifies the pdf format" do
 		ResumeBuilder.any_instance.stub(:prompt).and_return(["pdf", "name", 23, 2315496825])
-		#TXTWriter.any_instance.should_receive(:write_to_file)
 		resume.create_user
 		expect(resume.format).to eql("pdf")
-		#resume.write_file
 	end
 
 	it "gets the supported formats in hash" do
-		#resume.load_plugins
 		hash = resume.get_supported_formats
 		expect(hash.keys.include?("csv")).to eql(true)
 		expect(hash.keys.include?("txt")).to eql(true)
